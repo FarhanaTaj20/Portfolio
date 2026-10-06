@@ -1,0 +1,2989 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>B. Farhana Taj | AI Data Analyst</title>
+
+    <meta
+        name="description"
+        content="B. Farhana Taj — AI Data Analyst portfolio featuring Data Analytics, Machine Learning, LLM and Generative AI projects."
+    >
+
+    <meta name="theme-color" content="#07111f">
+
+    <style>
+        /* =========================================================
+           RESET
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        html {
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family:
+                Inter,
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                sans-serif;
+
+            background:
+                radial-gradient(
+                    circle at 15% 10%,
+                    rgba(34, 211, 238, 0.09),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(167, 139, 250, 0.11),
+                    transparent 25%
+                ),
+                #07111f;
+
+            color: #eef6ff;
+            line-height: 1.6;
+            overflow-x: hidden;
+
+            transition:
+                background 0.3s ease,
+                color 0.3s ease;
+        }
+
+        body.light {
+            background:
+                radial-gradient(
+                    circle at 15% 10%,
+                    rgba(34, 211, 238, 0.12),
+                    transparent 25%
+                ),
+                #f5f9ff;
+
+            color: #10233d;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        button {
+            font: inherit;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        ::selection {
+            background: rgba(96, 165, 250, 0.3);
+        }
+
+        /* =========================================================
+           VARIABLES
+        ========================================================= */
+
+        :root {
+            --card: rgba(15, 29, 49, 0.75);
+            --text: #eef6ff;
+            --muted: #9bb0c8;
+            --line: rgba(148, 190, 255, 0.15);
+
+            --primary: #60a5fa;
+            --cyan: #22d3ee;
+            --violet: #a78bfa;
+
+            --max: 1180px;
+
+            --shadow:
+                0 25px 80px rgba(0, 0, 0, 0.32);
+        }
+
+        /* =========================================================
+           ACCESSIBILITY
+        ========================================================= */
+
+        :focus-visible {
+            outline: 2px solid var(--cyan);
+            outline-offset: 3px;
+        }
+
+        /* =========================================================
+           PROGRESS BAR
+        ========================================================= */
+
+        #progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            height: 3px;
+            width: 0;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--cyan),
+                    var(--primary),
+                    var(--violet)
+                );
+
+            z-index: 9999;
+        }
+
+        /* =========================================================
+           NAVIGATION
+        ========================================================= */
+
+        nav {
+            position: fixed;
+
+            top: 14px;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+            width: min(94%, 1080px);
+
+            padding: 12px 16px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 15px;
+
+            background: rgba(7, 17, 31, 0.75);
+
+            border: 1px solid var(--line);
+
+            backdrop-filter: blur(18px);
+
+            border-radius: 20px;
+
+            z-index: 1000;
+
+            box-shadow: var(--shadow);
+        }
+
+        body.light nav {
+            background: rgba(255, 255, 255, 0.82);
+        }
+
+        .logo {
+            font-weight: 900;
+            letter-spacing: 0.5px;
+            color: #fff;
+            white-space: nowrap;
+        }
+
+        body.light .logo {
+            color: #10233d;
+        }
+
+        .logo span {
+            color: var(--cyan);
+        }
+
+        .navlinks {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+        }
+
+        .navlinks a {
+            font-size: 13px;
+            color: var(--muted);
+
+            padding: 8px 11px;
+
+            border-radius: 10px;
+
+            transition: 0.25s;
+        }
+
+        .navlinks a:hover {
+            color: #fff;
+            background: rgba(96, 165, 250, 0.1);
+        }
+
+        body.light .navlinks a:hover {
+            color: #10233d;
+        }
+
+        .menu {
+            display: none;
+
+            background: none;
+            border: 0;
+
+            color: #fff;
+
+            font-size: 23px;
+
+            cursor: pointer;
+
+            line-height: 1;
+        }
+
+        body.light .menu {
+            color: #10233d;
+        }
+
+        .theme {
+            flex-shrink: 0;
+
+            border: 1px solid var(--line);
+
+            background: rgba(255, 255, 255, 0.04);
+
+            color: #fff;
+
+            width: 38px;
+            height: 38px;
+
+            border-radius: 11px;
+
+            cursor: pointer;
+
+            transition: 0.25s;
+        }
+
+        .theme:hover {
+            transform: translateY(-2px);
+            background: rgba(96, 165, 250, 0.12);
+        }
+
+        body.light .theme {
+            color: #10233d;
+        }
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            min-height: 100vh;
+
+            max-width: var(--max);
+
+            margin: auto;
+
+            padding: 145px 24px 90px;
+
+            display: grid;
+
+            grid-template-columns: 1.25fr 0.75fr;
+
+            align-items: center;
+
+            gap: 50px;
+
+            position: relative;
+        }
+
+        .gridglow {
+            position: absolute;
+
+            inset: 0;
+
+            pointer-events: none;
+
+            background-image:
+                linear-gradient(
+                    rgba(96, 165, 250, 0.04) 1px,
+                    transparent 1px
+                ),
+                linear-gradient(
+                    90deg,
+                    rgba(96, 165, 250, 0.04) 1px,
+                    transparent 1px
+                );
+
+            background-size: 45px 45px;
+
+            mask-image:
+                linear-gradient(
+                    to bottom,
+                    black,
+                    transparent 80%
+                );
+
+            -webkit-mask-image:
+                linear-gradient(
+                    to bottom,
+                    black,
+                    transparent 80%
+                );
+        }
+
+        .hero-copy,
+        .hero-card {
+            position: relative;
+            z-index: 1;
+        }
+
+        .badge {
+            display: inline-flex;
+
+            gap: 8px;
+
+            align-items: center;
+
+            padding: 8px 13px;
+
+            border:
+                1px solid
+                rgba(34, 211, 238, 0.25);
+
+            background:
+                rgba(34, 211, 238, 0.06);
+
+            border-radius: 999px;
+
+            color: #a8f1fb;
+
+            font-size: 13px;
+
+            margin-bottom: 22px;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+
+            background: #34d399;
+
+            box-shadow:
+                0 0 14px #34d399;
+        }
+
+        .hero h1 {
+            font-size: clamp(46px, 7vw, 82px);
+
+            line-height: 0.98;
+
+            letter-spacing: -3px;
+
+            margin-bottom: 20px;
+        }
+
+        .gradient {
+            background:
+                linear-gradient(
+                    90deg,
+                    #fff,
+                    var(--primary),
+                    var(--cyan)
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        body.light .gradient {
+            background:
+                linear-gradient(
+                    90deg,
+                    #10233d,
+                    #2563eb,
+                    #0891b2
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+
+            color: transparent;
+        }
+
+        .typing {
+            font-size: clamp(21px, 3vw, 32px);
+
+            color: #c8d8ea;
+
+            min-height: 48px;
+        }
+
+        body.light .typing {
+            color: #405674;
+        }
+
+        .cursor {
+            border-right: 2px solid var(--cyan);
+
+            animation: blink 0.8s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+        .hero p {
+            color: var(--muted);
+
+            max-width: 650px;
+
+            font-size: 17px;
+
+            margin: 22px 0 28px;
+        }
+
+        .actions {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 12px 18px;
+
+            border-radius: 13px;
+
+            border: 1px solid var(--line);
+
+            font-weight: 750;
+
+            transition: 0.3s;
+
+            display: inline-flex;
+
+            align-items: center;
+
+            gap: 8px;
+
+            cursor: pointer;
+        }
+
+        .primary {
+            background:
+                linear-gradient(
+                    135deg,
+                    #2563eb,
+                    #0891b2
+                );
+
+            color: white;
+
+            box-shadow:
+                0 12px 30px
+                rgba(37, 99, 235, 0.25);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+
+            border-color:
+                rgba(96, 165, 250, 0.45);
+        }
+
+        /* =========================================================
+           STATS
+        ========================================================= */
+
+        .stats {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 14px;
+
+            margin-top: 35px;
+        }
+
+        .stat {
+            padding: 20px;
+
+            border:
+                1px solid
+                var(--line);
+
+            background: var(--card);
+
+            border-radius: 18px;
+        }
+
+        .stat strong {
+            font-size: 28px;
+        }
+
+        .stat span {
+            display: block;
+
+            color: var(--muted);
+
+            font-size: 12px;
+
+            margin-top: 3px;
+        }
+
+        /* =========================================================
+           PROFILE
+        ========================================================= */
+
+        .hero-card {
+            display: flex;
+
+            justify-content: center;
+        }
+
+        .profile-wrap {
+            width: 320px;
+            height: 390px;
+
+            border-radius: 35px;
+
+            padding: 2px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(96, 165, 250, 0.8),
+                    rgba(167, 139, 250, 0.35),
+                    rgba(34, 211, 238, 0.7)
+                );
+
+            box-shadow:
+                0 30px 90px
+                rgba(34, 211, 238, 0.1);
+
+            transform: rotate(2deg);
+        }
+
+        .profile-inner {
+            height: 100%;
+
+            border-radius: 34px;
+
+            background:
+                linear-gradient(
+                    160deg,
+                    #0f2742,
+                    #081321
+                );
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+
+            position: relative;
+        }
+
+        body.light .profile-inner {
+            background: #eaf3ff;
+        }
+
+        /* =========================================================
+           PROFILE PHOTO
+        ========================================================= */
+
+        .profile-photo {
+            width: 230px;
+            height: 280px;
+
+            object-fit: cover;
+
+            border-radius: 25px;
+
+            border: 4px solid rgba(255,255,255,0.25);
+
+            box-shadow:
+                0 20px 60px
+                rgba(34, 211, 238, 0.25);
+
+            display: block;
+        }
+
+        /* =========================================================
+           FLOATING CARDS
+        ========================================================= */
+
+        .floating {
+            position: absolute;
+
+            background:
+                rgba(10, 25, 43, 0.9);
+
+            border:
+                1px solid
+                var(--line);
+
+            padding: 12px 15px;
+
+            border-radius: 14px;
+
+            backdrop-filter: blur(14px);
+
+            font-size: 12px;
+
+            box-shadow: var(--shadow);
+        }
+
+        body.light .floating {
+            background: rgba(255, 255, 255, 0.9);
+
+            color: #10233d;
+        }
+
+        .float1 {
+            right: -20px;
+            top: 50px;
+        }
+
+        .float2 {
+            left: -25px;
+            bottom: 45px;
+        }
+
+        .float3 {
+            right: 5px;
+            bottom: -22px;
+        }
+
+        /* =========================================================
+           SECTIONS
+        ========================================================= */
+
+        section {
+            padding: 95px 24px;
+
+            max-width: var(--max);
+
+            margin: auto;
+        }
+
+        .section-head {
+            margin-bottom: 42px;
+        }
+
+        .eyebrow {
+            color: var(--cyan);
+
+            font-size: 12px;
+
+            text-transform: uppercase;
+
+            letter-spacing: 2px;
+
+            font-weight: 800;
+        }
+
+        .section-head h2 {
+            font-size:
+                clamp(30px, 4vw, 46px);
+
+            letter-spacing: -1.5px;
+
+            margin: 7px 0;
+        }
+
+        .section-head p {
+            color: var(--muted);
+
+            max-width: 650px;
+        }
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 22px;
+        }
+
+        .panel {
+            background: var(--card);
+
+            border:
+                1px solid
+                var(--line);
+
+            border-radius: 22px;
+
+            padding: 28px;
+
+            box-shadow: var(--shadow);
+        }
+
+        .panel p {
+            color: var(--muted);
+
+            margin-bottom: 13px;
+        }
+
+        .highlight {
+            color: #dcecff;
+
+            font-weight: 700;
+        }
+
+        body.light .highlight {
+            color: #183b64;
+        }
+
+        /* =========================================================
+           SKILLS
+        ========================================================= */
+
+        .skill-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 15px;
+        }
+
+        .skill {
+            padding: 22px;
+
+            background: var(--card);
+
+            border:
+                1px solid
+                var(--line);
+
+            border-radius: 18px;
+
+            transition: 0.3s;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .skill:hover {
+            transform: translateY(-7px);
+
+            border-color:
+                rgba(96, 165, 250, 0.35);
+        }
+
+        .skill .icon {
+            font-size: 28px;
+
+            margin-bottom: 10px;
+        }
+
+        .skill h3 {
+            font-size: 17px;
+        }
+
+        .skill p {
+            font-size: 13px;
+
+            color: var(--muted);
+        }
+
+        /* =========================================================
+           CHIPS
+        ========================================================= */
+
+        .tools {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+        }
+
+        .chip {
+            padding: 9px 13px;
+
+            border:
+                1px solid
+                var(--line);
+
+            background:
+                rgba(96, 165, 250, 0.06);
+
+            border-radius: 999px;
+
+            color: #c9ddf4;
+
+            font-size: 13px;
+
+            transition: 0.25s;
+        }
+
+        body.light .chip {
+            color: #24466c;
+        }
+
+        .chip:hover {
+            background:
+                rgba(96, 165, 250, 0.16);
+
+            transform: translateY(-2px);
+        }
+
+        /* =========================================================
+           TIMELINE
+        ========================================================= */
+
+        .timeline {
+            position: relative;
+
+            max-width: 900px;
+        }
+
+        .timeline::before {
+            content: "";
+
+            position: absolute;
+
+            left: 12px;
+
+            top: 8px;
+
+            bottom: 8px;
+
+            width: 1px;
+
+            background:
+                linear-gradient(
+                    var(--cyan),
+                    var(--violet),
+                    transparent
+                );
+        }
+
+        .step {
+            position: relative;
+
+            padding:
+                0 0 28px 48px;
+        }
+
+        .step:last-child {
+            padding-bottom: 0;
+        }
+
+        .step::before {
+            content: "";
+
+            position: absolute;
+
+            left: 7px;
+
+            top: 8px;
+
+            width: 11px;
+
+            height: 11px;
+
+            border-radius: 50%;
+
+            background: var(--cyan);
+
+            box-shadow:
+                0 0 18px
+                rgba(34, 211, 238, 0.7);
+        }
+
+        .step h3 {
+            font-size: 19px;
+        }
+
+        .step p {
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+        /* =========================================================
+           PROJECT FILTERS
+        ========================================================= */
+
+        .filters {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin-bottom: 22px;
+        }
+
+        .filter {
+            cursor: pointer;
+
+            border:
+                1px solid
+                var(--line);
+
+            background: transparent;
+
+            color: var(--muted);
+
+            padding: 8px 13px;
+
+            border-radius: 999px;
+
+            transition: 0.25s;
+        }
+
+        .filter.active,
+        .filter:hover {
+            background:
+                rgba(96, 165, 250, 0.13);
+
+            color: #fff;
+
+            border-color:
+                rgba(96, 165, 250, 0.3);
+        }
+
+        body.light .filter.active,
+        body.light .filter:hover {
+            color: #10233d;
+        }
+
+        /* =========================================================
+           PROJECTS
+        ========================================================= */
+
+        .projects {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .project {
+            padding: 24px;
+
+            background:
+                linear-gradient(
+                    160deg,
+                    rgba(15, 32, 54, 0.85),
+                    rgba(8, 20, 35, 0.85)
+                );
+
+            border:
+                1px solid
+                var(--line);
+
+            border-radius: 22px;
+
+            transition: 0.35s;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        body.light .project {
+            background: white;
+        }
+
+        .project:hover {
+            transform: translateY(-8px);
+
+            border-color:
+                rgba(96, 165, 250, 0.35);
+
+            box-shadow:
+                0 22px 60px
+                rgba(0, 0, 0, 0.2);
+        }
+
+        .project.hidden {
+            display: none;
+        }
+
+        .project .icon {
+            font-size: 34px;
+        }
+
+        .project h3 {
+            margin: 13px 0 8px;
+        }
+
+        .project p {
+            font-size: 13px;
+
+            color: var(--muted);
+
+            min-height: 63px;
+        }
+
+        .tags {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 6px;
+
+            margin: 15px 0;
+        }
+
+        .tags span {
+            font-size: 10px;
+
+            padding: 5px 8px;
+
+            background:
+                rgba(96, 165, 250, 0.09);
+
+            color: #b9d7f7;
+
+            border-radius: 6px;
+        }
+
+        .project a {
+            color: var(--cyan);
+
+            font-size: 13px;
+
+            font-weight: 750;
+        }
+
+        /* =========================================================
+           EDUCATION
+        ========================================================= */
+
+        .education {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 16px;
+        }
+
+        .edu {
+            padding: 23px;
+
+            border:
+                1px solid
+                var(--line);
+
+            border-radius: 18px;
+
+            background: var(--card);
+        }
+
+        .edu small {
+            color: var(--cyan);
+        }
+
+        .edu p {
+            color: var(--muted);
+
+            font-size: 14px;
+        }
+
+        /* =========================================================
+           CERTIFICATIONS
+        ========================================================= */
+
+        .certs {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 14px;
+        }
+
+        .cert {
+            padding: 19px;
+
+            border:
+                1px solid
+                var(--line);
+
+            border-radius: 16px;
+
+            background: var(--card);
+        }
+
+        .cert h3 {
+            font-size: 16px;
+        }
+
+        .cert p {
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
+        .contact {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 18px;
+        }
+
+        .contact-card {
+            padding: 26px;
+
+            border-radius: 22px;
+
+            border:
+                1px solid
+                var(--line);
+
+            background: var(--card);
+        }
+
+        .contact-item {
+            padding: 12px 0;
+
+            border-bottom:
+                1px solid
+                var(--line);
+        }
+
+        .contact-item:last-child {
+            border: 0;
+        }
+
+        .contact-item small {
+            color: var(--muted);
+
+            display: block;
+        }
+
+        .contact-item a {
+            transition: 0.2s;
+        }
+
+        .contact-item a:hover {
+            color: var(--cyan);
+        }
+
+        .socials {
+            display: flex;
+
+            gap: 9px;
+
+            flex-wrap: wrap;
+
+            margin-top: 18px;
+        }
+
+        .socials a {
+            padding: 9px 13px;
+
+            border-radius: 10px;
+
+            background:
+                rgba(96, 165, 250, 0.08);
+
+            border:
+                1px solid
+                var(--line);
+
+            font-size: 13px;
+
+            transition: 0.25s;
+        }
+
+        .socials a:hover {
+            transform: translateY(-2px);
+
+            background:
+                rgba(96, 165, 250, 0.15);
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            text-align: center;
+
+            padding: 30px 20px;
+
+            border-top:
+                1px solid
+                var(--line);
+
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+        /* =========================================================
+           REVEAL
+        ========================================================= */
+
+        .reveal {
+            opacity: 0;
+
+            transform:
+                translateY(25px);
+
+            transition:
+                opacity 0.7s ease,
+                transform 0.7s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+
+            transform: none;
+        }
+
+        /* =========================================================
+           BACK TO TOP
+        ========================================================= */
+
+        .top {
+            position: fixed;
+
+            right: 20px;
+
+            bottom: 20px;
+
+            width: 42px;
+
+            height: 42px;
+
+            border-radius: 12px;
+
+            border:
+                1px solid
+                var(--line);
+
+            background:
+                rgba(8, 20, 35, 0.85);
+
+            color: #fff;
+
+            cursor: pointer;
+
+            opacity: 0;
+
+            pointer-events: none;
+
+            transition: 0.3s;
+
+            z-index: 100;
+        }
+
+        body.light .top {
+            background: rgba(255, 255, 255, 0.9);
+            color: #10233d;
+        }
+
+        .top.show {
+            opacity: 1;
+
+            pointer-events: auto;
+        }
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 900px) {
+
+            nav {
+                top: 8px;
+            }
+
+            .menu {
+                display: block;
+            }
+
+            .navlinks {
+                display: none;
+
+                position: absolute;
+
+                top: 62px;
+
+                left: 0;
+
+                right: 0;
+
+                padding: 12px;
+
+                background:
+                    rgba(7, 17, 31, 0.97);
+
+                border:
+                    1px solid
+                    var(--line);
+
+                border-radius: 16px;
+
+                flex-direction: column;
+            }
+
+            body.light .navlinks {
+                background: white;
+            }
+
+            .navlinks.open {
+                display: flex;
+            }
+
+            .navlinks a {
+                width: 100%;
+
+                text-align: center;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+
+                padding-top: 125px;
+            }
+
+            .hero p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .actions {
+                justify-content: center;
+            }
+
+            .hero-card {
+                margin-top: 15px;
+            }
+
+            .stats {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .about-grid,
+            .contact {
+                grid-template-columns: 1fr;
+            }
+
+            .skill-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .projects {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .education {
+                grid-template-columns: 1fr;
+            }
+
+            .profile-wrap {
+                width: 280px;
+                height: 330px;
+            }
+
+            .profile-photo {
+                width: 200px;
+                height: 245px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            section {
+                padding: 70px 18px;
+            }
+
+            .hero {
+                padding-left: 18px;
+                padding-right: 18px;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .stats,
+            .skill-grid,
+            .projects,
+            .certs {
+                grid-template-columns: 1fr;
+            }
+
+            .floating {
+                display: none;
+            }
+
+            .profile-wrap {
+                width: 245px;
+                height: 300px;
+            }
+
+            .profile-photo {
+                width: 175px;
+                height: 215px;
+            }
+
+            .section-head {
+                margin-bottom: 28px;
+            }
+
+            .actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero .actions .btn {
+                width: auto;
+            }
+
+            .top {
+                right: 14px;
+                bottom: 14px;
+            }
+        }
+
+        /* =========================================================
+           REDUCED MOTION
+        ========================================================= */
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition-duration: 0.01ms !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+            }
+
+            .reveal {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+
+            .cursor {
+                animation: none;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================================================
+         PROGRESS BAR
+    ========================================================= -->
+
+    <div id="progress" aria-hidden="true"></div>
+
+
+    <!-- =========================================================
+         NAVIGATION
+    ========================================================= -->
+
+    <nav aria-label="Main navigation">
+
+        <a class="logo" href="#home">
+            Farhana<span>.AI</span>
+        </a>
+
+        <button
+            class="menu"
+            id="menu"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-expanded="false"
+            aria-controls="navlinks">
+            ☰
+        </button>
+
+        <div class="navlinks" id="navlinks">
+
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#technologies">Technologies</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#certifications">Certifications</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+        <button
+            class="theme"
+            id="theme"
+            type="button"
+            aria-label="Toggle light and dark theme">
+            ☼
+        </button>
+
+    </nav>
+
+
+    <main>
+
+        <!-- =====================================================
+             HERO
+        ===================================================== -->
+
+        <section class="hero" id="home">
+
+            <div class="gridglow"></div>
+
+            <div class="hero-copy reveal">
+
+                <div class="badge">
+                    <span class="dot"></span>
+                    Open to opportunities • AI &amp; Data
+                </div>
+
+                <h1>
+                    B. Farhana
+                    <span class="gradient">Taj</span>
+                </h1>
+
+                <div class="typing" aria-live="polite">
+                    I'm a
+                    <span
+                        id="typing"
+                        class="gradient">
+                    </span>
+                    <span
+                        class="cursor"
+                        aria-hidden="true">
+                    </span>
+                </div>
+
+                <p>
+                    I build data-driven and AI-powered solutions
+                    by combining analytics, machine learning,
+                    LLMs and Generative AI — turning raw
+                    information into useful ideas and experiences.
+                </p>
+
+                <div class="actions">
+
+                    <a
+                        class="btn primary"
+                        href="#projects">
+                        🚀 Explore My Work
+                    </a>
+
+                    <a
+                        class="btn"
+                        href="resume.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer">
+                        📄 View Resume
+                    </a>
+
+                    <a
+                        class="btn"
+                        href="resume.pdf"
+                        download>
+                        ⬇ Download Resume
+                    </a>
+
+                </div>
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <strong>10+</strong>
+                        <span>AI / Data projects</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>15+</strong>
+                        <span>Core technologies</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>07</strong>
+                        <span>Learning stages</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong>∞</strong>
+                        <span>Curiosity to learn</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROFILE -->
+
+            <div class="hero-card reveal">
+
+                <div class="profile-wrap">
+
+                    <div class="profile-inner">
+
+                        <img
+                            src="profile.jpg"
+                            alt="Portrait of B. Farhana Taj"
+                            class="profile-photo"
+                            loading="lazy">
+
+                    </div>
+
+                </div>
+
+                <div class="floating float1">
+                    🤖 Generative AI
+                </div>
+
+                <div class="floating float2">
+                    📊 Data Analytics
+                </div>
+
+                <div class="floating float3">
+                    🧠 LLM + RAG
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ABOUT
+        ===================================================== -->
+
+        <section id="about" class="reveal">
+
+            <div class="section-head">
+
+                <span class="eyebrow">
+                    01 / Profile
+                </span>
+
+                <h2>
+                    More than a portfolio.
+                </h2>
+
+                <p>
+                    A snapshot of what I'm learning,
+                    building and exploring.
+                </p>
+
+            </div>
+
+            <div class="about-grid">
+
+                <div class="panel">
+
+                    <p>
+                        Hello! I'm
+                        <span class="highlight">
+                            B. Farhana Taj
+                        </span>,
+                        an AI Data Analyst passionate
+                        about using data and artificial intelligence
+                        to solve real-world problems.
+                    </p>
+
+                    <p>
+                        I'm developing skills across
+                        <span class="highlight">
+                            Python, SQL, Excel, Statistics,
+                            Data Visualization, Power BI, Tableau,
+                            Pandas, NumPy, Matplotlib, Seaborn,
+                            Data Cleaning, Exploratory Data Analysis,
+                            Machine Learning, Deep Learning, NLP,
+                            Computer Vision, LLMs, Generative AI,
+                            Prompt Engineering, RAG, LangChain,
+                            Vector Databases, AI Agents, APIs,
+                            FastAPI, Streamlit, Git, GitHub and Docker.
+                        </span>
+                    </p>
+
+                    <p>
+                        I enjoy exploring datasets, finding patterns,
+                        creating dashboards, building predictive
+                        models and experimenting with AI-powered
+                        applications.
+                    </p>
+
+                </div>
+
+
+                <div class="panel">
+
+                    <span class="eyebrow">
+                        Career direction
+                    </span>
+
+                    <h3
+                        style="
+                        font-size:25px;
+                        margin:9px 0 14px;">
+                        Data → Intelligence → Impact
+                    </h3>
+
+                    <p>
+                        My goal is to combine Data Analytics,
+                        AI, Machine Learning and LLM technologies
+                        to create practical, data-driven solutions.
+                    </p>
+
+                    <div class="tools">
+
+                        <span class="chip">Python</span>
+                        <span class="chip">SQL</span>
+                        <span class="chip">Power BI</span>
+                        <span class="chip">Machine Learning</span>
+                        <span class="chip">LLM</span>
+                        <span class="chip">RAG</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             SKILLS
+        ===================================================== -->
+
+        <section id="skills" class="reveal">
+
+            <div class="section-head">
+
+                <span class="eyebrow">
+                    02 / Capabilities
+                </span>
+
+                <h2>
+                    My skill stack
+                </h2>
+
+                <p>
+                    From fundamentals to modern AI
+                    application development.
+                </p>
+
+            </div>
+
+            <div class="skill-grid">
+
+                <div class="skill">
+                    <div class="icon">🐍</div>
+                    <h3>Python</h3>
+                    <p>Programming, automation and data analysis</p>
+                </div>
+
+                <div class="skill">
+                    <div class="icon">🗄️</div>
+                    <h3>SQL</h3>
+                    <p>Queries, joins, subqueries and databases</p>
+                </div>
+
+                <div class="skill">
+                    <div class="icon">📊</div>
+                    <h3>Data Analytics</h3>
+                    <p>Cleaning, exploration and insights</p>
+                </div>
+
+                <div class="skill">
+                    <div class="icon">📈</div>
+                    <h3>Power BI</h3>
+                    <p>Dashboards, KPIs and BI reporting</p>
+                </div>
+
+                <div class="skill">
+                    <div class="icon">📐</div>
+                    <h3>Statistics</h3>
+                    <p>Probability, hypothesis testing and analysis</p>
+                </div>
+
+                <div class="skill">
+                    <div class="icon">🤖</div>
+                    <h3>Machine Learning</h3>
+                    <p>Regression, classification and clustering</p>
+                </div>
+
+                <div class="skill">
+                    <div class="icon">🧠</div>
+                    <h3>Deep Learning</h3>
+                    <p>Neural networks, CNN and RNN</p>
+                </div>
+
+                <div class="skill">
+                    <div class="icon">💬</div>
+                    <h3>NLP</h3>
+                    <p>Text processing and classification</p>
+                </div>
+
+                <div class="skill">
+                    <div class="icon">✨</div>
+                    <h3>LLM</h3>
+                    <p>Large Language Models and AI applications</p>
+                </div>
+
+                <div class="skill">
+                    <div class="icon">🚀</div>
+                    <h3>Generative AI</h3>
+                    <p>AI-powered applications and generation</p>
+                </div>
+
+                <div class="skill">
+                    <div class="icon">📚</div>
+                    <h3>RAG</h3>
+                    <p>Retrieval-Augmented Generation</p>
+                </div>
+
+                <div class="skill">
+                    <div class="icon">🔎</div>
+                    <h3>Vector Databases</h3>
+                    <p>Similarity search and retrieval</p>
+                </div>
+
+                <div class="skill">
+                      <div class="icon">🧠</div>
+                      <h3>Large Language Models (LLM)</h3>
+                      <p>Prompt engineering, fine-tuning and NLP</p>
+                </div>
+
+                 <div class="skill">
+                    <div class="icon">✨</div>
+                    <h3>Generative AI</h3>
+                    <p>LLM applications, RAG and AI-powered solutions</p>
+                 </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             TECHNOLOGIES
+        ===================================================== -->
+
+        <section id="technologies" class="reveal">
+
+            <div class="section-head">
+
+                <span class="eyebrow">
+                    03 / Toolbox
+                </span>
+
+                <h2>
+                    Technologies I explore
+                </h2>
+
+            </div>
+
+            <div class="tools">
+
+                <span class="chip">Python</span>
+                <span class="chip">SQL</span>
+                <span class="chip">Excel</span>
+                <span class="chip">Pandas</span>
+                <span class="chip">NumPy</span>
+                <span class="chip">Matplotlib</span>
+                <span class="chip">Seaborn</span>
+                <span class="chip">Power BI</span>
+                <span class="chip">Tableau</span>
+                <span class="chip">MySQL</span>
+                <span class="chip">PostgreSQL</span>
+                <span class="chip">MongoDB</span>
+                <span class="chip">Scikit-learn</span>
+                <span class="chip">TensorFlow</span>
+                <span class="chip">PyTorch</span>
+                <span class="chip">NLP</span>
+                <span class="chip">LLM</span>
+                <span class="chip">Generative AI</span>
+                <span class="chip">RAG</span>
+                <span class="chip">LangChain</span>
+                <span class="chip">Hugging Face</span>
+                <span class="chip">Prompt Engineering</span>
+                <span class="chip">Jupyter</span>
+                <span class="chip">VS Code</span>
+                <span class="chip">Git</span>
+                <span class="chip">GitHub</span>
+                <span class="chip">Streamlit</span>
+                <span class="chip">FastAPI</span>
+                <span class="chip">Docker</span>
+                <span class="chip">Machine learning</span>
+                <span class="chip">Deep Learning</span>
+                <span class="chip">Data Visualization</span>
+                <span class="chip">Data cleaning</span>
+                <span class="chip">Exploratory Data analysis</span>
+                <span class="chip">Artificial Intelligence</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             ROADMAP
+        ===================================================== -->
+
+        <section id="roadmap" class="reveal">
+
+            <div class="section-head">
+
+                <span class="eyebrow">
+                    04 / Journey
+                </span>
+
+                <h2>
+                    AI Data Career Roadmap
+                </h2>
+
+                <p>
+                    A structured path from data foundations
+                    to deployable AI applications.
+                </p>
+
+            </div>
+
+            <div class="timeline">
+
+                <div class="step">
+                    <h3>01. Programming &amp; Data Fundamentals</h3>
+                    <p>
+                        Python, SQL, Excel, Data Structures
+                        and basic programming.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <h3>02. Data Analytics</h3>
+                    <p>
+                        Pandas, NumPy, data cleaning,
+                        exploratory analysis, statistics
+                        and visualization.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <h3>03. Business Intelligence</h3>
+                    <p>
+                        Power BI, Tableau, dashboards,
+                        KPIs and business reporting.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <h3>04. Machine Learning</h3>
+                    <p>
+                        Regression, classification, clustering,
+                        feature engineering, training and evaluation.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <h3>05. Deep Learning &amp; NLP</h3>
+                    <p>
+                        Neural networks, CNN, RNN,
+                        Transformers and Natural Language Processing.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <h3>06. LLM &amp; Generative AI</h3>
+                    <p>
+                        Large Language Models, prompt engineering,
+                        embeddings, RAG and AI-powered applications.
+                    </p>
+                </div>
+
+                <div class="step">
+                    <h3>07. Deployment</h3>
+                    <p>
+                        Streamlit, FastAPI, GitHub,
+                        Docker and basic cloud deployment.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             PROJECTS
+        ===================================================== -->
+
+        <section id="projects" class="reveal">
+
+            <div class="section-head">
+
+                <span class="eyebrow">
+                    05 / Selected Work
+                </span>
+
+                <h2>
+                    Projects that tell the story
+                </h2>
+
+                <p>
+                    Filter the portfolio by the type
+                    of problem being explored.
+                </p>
+
+            </div>
+
+            <div class="filters">
+
+                <button
+                    class="filter active"
+                    type="button"
+                    data-filter="all"
+                    aria-pressed="true">
+                    All
+                </button>
+
+                <button
+                    class="filter"
+                    type="button"
+                    data-filter="data"
+                    aria-pressed="false">
+                    Data
+                </button>
+
+                <button
+                    class="filter"
+                    type="button"
+                    data-filter="ml"
+                    aria-pressed="false">
+                    Machine Learning
+                </button>
+
+                <button
+                    class="filter"
+                    type="button"
+                    data-filter="ai"
+                    aria-pressed="false">
+                    AI / LLM
+                </button>
+
+            </div>
+
+
+            <div class="projects">
+
+                <article class="project" data-type="data">
+
+                    <div class="icon">📊</div>
+
+                    <h3>Sales Data Analysis</h3>
+
+                    <p>
+                        Analyze sales data to identify
+                        revenue trends, top products,
+                        customer behavior and business insights.
+                    </p>
+
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                    </div>
+
+                    <a href="#contact">
+                        Project Details →
+                    </a>
+
+                </article>
+
+
+                <article class="project" data-type="data">
+
+                    <div class="icon">📈</div>
+
+                    <h3>Power BI Business Dashboard</h3>
+
+                    <p>
+                        Interactive dashboard showing revenue,
+                        profit, sales, customers and
+                        key performance indicators.
+                    </p>
+
+                    <div class="tags">
+                        <span>Power BI</span>
+                        <span>Excel</span>
+                        <span>SQL</span>
+                    </div>
+
+                    <a href="#contact">
+                        Project Details →
+                    </a>
+
+                </article>
+
+
+                <article class="project" data-type="ml">
+
+                    <div class="icon">🤖</div>
+
+                    <h3>Customer Churn Prediction</h3>
+
+                    <p>
+                        Machine learning model that predicts
+                        whether a customer is likely to leave a service.
+                    </p>
+
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Scikit-learn</span>
+                    </div>
+
+                    <a href="#contact">
+                        Project Details →
+                    </a>
+
+                </article>
+
+
+                <article class="project" data-type="ml">
+
+                    <div class="icon">🔮</div>
+
+                    <h3>House Price Prediction</h3>
+
+                    <p>
+                        Predict house prices using regression
+                        algorithms and historical property data.
+                    </p>
+
+                    <div class="tags">
+                        <span>Python</span>
+                        <span>Machine Learning</span>
+                    </div>
+
+                    <a href="#contact">
+                        Project Details →
+                    </a>
+
+                </article>
+
+
+                <article class="project" data-type="ai">
+
+                    <div class="icon">💬</div>
+
+                    <h3>Sentiment Analysis</h3>
+
+                    <p>
+                        Analyze reviews or comments and classify
+                        text as positive, negative or neutral.
+                    </p>
+
+                    <div class="tags">
+                        <span>NLP</span>
+                        <span>ML</span>
+                    </div>
+
+                    <a href="#contact">
+                        Project Details →
+                    </a>
+
+                </article>
+
+
+                <article class="project" data-type="ai">
+
+                    <div class="icon">🧠</div>
+
+                    <h3>LLM Chatbot</h3>
+
+                    <p>
+                        AI chatbot concept designed to answer
+                        questions using a Large Language Model.
+                    </p>
+
+                    <div class="tags">
+                        <span>LLM</span>
+                        <span>NLP</span>
+                        <span>LangChain</span>
+                    </div>
+
+                    <a href="#contact">
+                        Project Details →
+                    </a>
+
+                </article>
+
+
+                <article class="project" data-type="ai">
+
+                    <div class="icon">📚</div>
+
+                    <h3>RAG Document Assistant</h3>
+
+                    <p>
+                        Question-answering system that retrieves
+                        information from documents before generating answers.
+                    </p>
+
+                    <div class="tags">
+                        <span>RAG</span>
+                        <span>Vector DB</span>
+                        <span>LLM</span>
+                    </div>
+
+                    <a href="#contact">
+                        Project Details →
+                    </a>
+
+                </article>
+
+
+                <article class="project" data-type="ml">
+
+                    <div class="icon">👥</div>
+
+                    <h3>Customer Segmentation</h3>
+
+                    <p>
+                        Group customers according to purchasing
+                        behavior using unsupervised machine learning.
+                    </p>
+
+                    <div class="tags">
+                        <span>K-Means</span>
+                        <span>Pandas</span>
+                    </div>
+
+                    <a href="#contact">
+                        Project Details →
+                    </a>
+
+                </article>
+
+
+                <article class="project" data-type="ai">
+
+                    <div class="icon">📄</div>
+
+                    <h3>AI Resume Analyzer</h3>
+
+                    <p>
+                        Analyze resumes, extract skills and compare
+                        candidate profiles with job requirements.
+                    </p>
+
+                    <div class="tags">
+                        <span>NLP</span>
+                        <span>LLM</span>
+                        <span>GenAI</span>
+                    </div>
+
+                    <a href="#contact">
+                        Project Details →
+                    </a>
+
+                </article>
+
+
+                <article class="project" data-type="ai">
+
+                    <div class="icon">🔎</div>
+
+                    <h3>AI Data Assistant</h3>
+
+                    <p>
+                        Ask questions about datasets using
+                        natural language and explore data
+                        through an AI assistant.
+                    </p>
+
+                    <div class="tags">
+                        <span>LLM</span>
+                        <span>SQL</span>
+                        <span>GenAI</span>
+                    </div>
+
+                    <a href="#contact">
+                        Project Details →
+                    </a>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             EDUCATION
+        ===================================================== -->
+
+        <section id="education" class="reveal">
+
+            <div class="section-head">
+
+                <span class="eyebrow">
+                    06 / Education
+                </span>
+
+                <h2>
+                    Academic foundation
+                </h2>
+
+            </div>
+
+            <div class="education">
+
+                <div class="edu">
+
+                    <small>2023 — 2027</small>
+
+                    <h3>
+                        Bachelor of Computer Applications
+                    </h3>
+
+                    <p>
+                        Kuppam Degree College
+                    </p>
+
+                </div>
+
+
+                <div class="edu">
+
+                    <small>2021 — 2023</small>
+
+                    <h3>
+                        Intermediate
+                    </h3>
+
+                    <p>
+                        Kuppam Junior College
+                    </p>
+
+                </div>
+
+
+                <div class="edu">
+
+                    <small>Completed 2021</small>
+
+                    <h3>
+                        School
+                    </h3>
+
+                    <p>
+                        Montfort Centenary School
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CERTIFICATIONS
+        ===================================================== -->
+
+        <section id="certifications" class="reveal">
+
+            <div class="section-head">
+
+                <span class="eyebrow">
+                    07 / Credentials
+                </span>
+
+                <h2>
+                    Certifications
+                </h2>
+
+            </div>
+
+            <div class="certs">
+
+                <div class="cert">
+                    <h3>Python for Data Analytics</h3>
+                    <p>Simplilearn</p>
+                </div>
+
+                <div class="cert">
+                    <h3>SQL &amp; Database Management</h3>
+                    <p>Simplilearn</p>
+                </div>
+
+                <div class="cert">
+                    <h3>Data Analytics</h3>
+                    <p>InAmigos Foundation</p>
+                </div>
+
+                <div class="cert">
+                    <h3>Power BI</h3>
+                    <p>Simplilearn</p>
+                </div>
+
+                <div class="cert">
+                    <h3>Machine Learning</h3>
+                    <p>Wayeva Innovation Pvt. Ltd.</p>
+                </div>
+
+                <div class="cert">
+                    <h3>Artificial Intelligence</h3>
+                    <p>Wayeva Innovation Pvt. Ltd.</p>
+                </div>
+
+                <div class="cert">
+                    <h3>Generative AI &amp; LLM</h3>
+                    <p>Simplilearn</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             CONTACT
+        ===================================================== -->
+
+        <section id="contact" class="reveal">
+
+            <div class="section-head">
+
+                <span class="eyebrow">
+                    08 / Connect
+                </span>
+
+                <h2>
+                    Let's build something useful.
+                </h2>
+
+                <p>
+                    Interested in data, AI, analytics or
+                    intelligent applications?
+                    Feel free to connect.
+                </p>
+
+            </div>
+
+
+            <div class="contact">
+
+                <div class="contact-card">
+
+                    <div class="contact-item">
+
+                        <small>Email</small>
+
+                        <a href="mailto:farhanafara0620@gmail.com">
+                            farhanafara0620@gmail.com
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <small>Phone</small>
+
+                        <a href="tel:+918919544558">
+                            +91 8919544558
+                        </a>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <small>Location</small>
+
+                        India
+
+                    </div>
+
+
+                    <div class="socials">
+
+                        <a
+                            href="https://github.com/FarhanaTaj20"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            GitHub ↗
+                        </a>
+
+                        <a
+                            href="https://www.linkedin.com/in/farhana-taj-12a5373b1/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            LinkedIn ↗
+                        </a>
+
+                        <a
+                            href="https://www.kaggle.com/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            Kaggle ↗
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-card">
+
+                    <span class="eyebrow">
+                        Current focus
+                    </span>
+
+                    <h3
+                        style="
+                        font-size:27px;
+                        margin:9px 0;">
+                        AI Data Analytics +
+                        Generative AI
+                    </h3>
+
+                    <p style="color:var(--muted)">
+
+                        Exploring the space where analytics,
+                        machine learning and modern AI
+                        applications meet.
+
+                    </p>
+
+
+                    <div
+                        class="actions"
+                        style="margin-top:20px;">
+
+                        <a
+                            class="btn primary"
+                            href="mailto:farhanafara0620@gmail.com">
+                            Start a conversation →
+                        </a>
+
+                        <a
+                            class="btn"
+                            href="resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            📄 Resume
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================================
+         FOOTER
+    ========================================================= -->
+
+    <footer>
+        © <span id="year">2026</span> B. Farhana Taj ·
+        Built with curiosity, data &amp; AI.
+    </footer>
+
+
+    <!-- BACK TO TOP -->
+
+    <button
+        class="top"
+        id="top"
+        type="button"
+        aria-label="Back to top">
+        ↑
+    </button>
+
+
+    <script>
+        /* =========================================================
+           TYPING ANIMATION
+        ========================================================= */
+
+        const typing = document.getElementById("typing");
+
+        const words = [
+            "AI Data Analyst",
+            "Data Explorer",
+            "Machine Learning Enthusiast",
+            "Generative AI Learner",
+            "LLM Explorer"
+        ];
+
+        let wordIndex = 0;
+        let charIndex = 0;
+        let deleting = false;
+
+        const reducedMotion = window.matchMedia(
+            "(prefers-reduced-motion: reduce)"
+        ).matches;
+
+        function typeWriter() {
+
+            if (reducedMotion) {
+                typing.textContent = words[0];
+                return;
+            }
+
+            const word = words[wordIndex];
+
+            typing.textContent =
+                word.substring(0, charIndex);
+
+            if (!deleting) {
+
+                if (charIndex < word.length) {
+
+                    charIndex++;
+
+                    setTimeout(typeWriter, 80);
+
+                } else {
+
+                    deleting = true;
+
+                    setTimeout(typeWriter, 1300);
+                }
+
+            } else {
+
+                if (charIndex > 0) {
+
+                    charIndex--;
+
+                    setTimeout(typeWriter, 45);
+
+                } else {
+
+                    deleting = false;
+
+                    wordIndex =
+                        (wordIndex + 1) % words.length;
+
+                    setTimeout(typeWriter, 300);
+                }
+            }
+        }
+
+        typeWriter();
+
+
+        /* =========================================================
+           MOBILE MENU
+        ========================================================= */
+
+        const menu =
+            document.getElementById("menu");
+
+        const nav =
+            document.getElementById("navlinks");
+
+        menu.addEventListener("click", function () {
+
+            const isOpen =
+                nav.classList.toggle("open");
+
+            menu.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+            menu.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation menu"
+                    : "Open navigation menu"
+            );
+
+            menu.textContent =
+                isOpen ? "✕" : "☰";
+        });
+
+
+        document
+            .querySelectorAll(".navlinks a")
+            .forEach(function (link) {
+
+                link.addEventListener("click", function () {
+
+                    nav.classList.remove("open");
+
+                    menu.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menu.setAttribute(
+                        "aria-label",
+                        "Open navigation menu"
+                    );
+
+                    menu.textContent = "☰";
+                });
+
+            });
+
+
+        /* =========================================================
+           THEME SWITCH
+        ========================================================= */
+
+        const theme =
+            document.getElementById("theme");
+
+        const savedTheme =
+            localStorage.getItem("farhana-theme");
+
+        if (savedTheme === "light") {
+
+            document.body.classList.add("light");
+
+            theme.textContent = "☾";
+
+        } else {
+
+            theme.textContent = "☼";
+        }
+
+
+        theme.addEventListener("click", function () {
+
+            document.body.classList.toggle("light");
+
+            const isLight =
+                document.body.classList.contains("light");
+
+            theme.textContent =
+                isLight ? "☾" : "☼";
+
+            localStorage.setItem(
+                "farhana-theme",
+                isLight ? "light" : "dark"
+            );
+        });
+
+
+        /* =========================================================
+           SCROLL REVEAL
+        ========================================================= */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+        if ("IntersectionObserver" in window) {
+
+            const observer =
+                new IntersectionObserver(
+                    function (entries) {
+
+                        entries.forEach(function (entry) {
+
+                            if (entry.isIntersecting) {
+
+                                entry.target.classList.add("show");
+
+                                observer.unobserve(
+                                    entry.target
+                                );
+                            }
+
+                        });
+
+                    },
+                    {
+                        threshold: 0.12
+                    }
+                );
+
+            revealElements.forEach(function (element) {
+                observer.observe(element);
+            });
+
+        } else {
+
+            revealElements.forEach(function (element) {
+                element.classList.add("show");
+            });
+
+        }
+
+
+        /* =========================================================
+           PROJECT FILTER
+        ========================================================= */
+
+        const filters =
+            document.querySelectorAll(".filter");
+
+        const projects =
+            document.querySelectorAll(".project");
+
+
+        filters.forEach(function (button) {
+
+            button.addEventListener("click", function () {
+
+                filters.forEach(function (item) {
+
+                    item.classList.remove("active");
+
+                    item.setAttribute(
+                        "aria-pressed",
+                        "false"
+                    );
+
+                });
+
+                button.classList.add("active");
+
+                button.setAttribute(
+                    "aria-pressed",
+                    "true"
+                );
+
+                const filter =
+                    button.dataset.filter;
+
+                projects.forEach(function (project) {
+
+                    const matches =
+                        filter === "all" ||
+                        project.dataset.type === filter;
+
+                    project.classList.toggle(
+                        "hidden",
+                        !matches
+                    );
+
+                });
+
+            });
+
+        });
+
+
+        /* =========================================================
+           SCROLL PROGRESS + BACK TO TOP
+        ========================================================= */
+
+        const progress =
+            document.getElementById("progress");
+
+        const topButton =
+            document.getElementById("top");
+
+
+        function updateScrollUI() {
+
+            const scrollHeight =
+                document.documentElement.scrollHeight -
+                window.innerHeight;
+
+            const percentage =
+                scrollHeight > 0
+                    ? (window.scrollY / scrollHeight) * 100
+                    : 0;
+
+            progress.style.width =
+                percentage + "%";
+
+
+            if (window.scrollY > 500) {
+
+                topButton.classList.add("show");
+
+            } else {
+
+                topButton.classList.remove("show");
+
+            }
+        }
+
+
+        window.addEventListener(
+            "scroll",
+            updateScrollUI,
+            { passive: true }
+        );
+
+        updateScrollUI();
+
+
+        /* =========================================================
+           BACK TO TOP
+        ========================================================= */
+
+        topButton.addEventListener(
+            "click",
+            function () {
+
+                window.scrollTo({
+                    top: 0,
+                    behavior:
+                        reducedMotion
+                            ? "auto"
+                            : "smooth"
+                });
+
+            }
+        );
+
+
+        /* =========================================================
+           CURRENT YEAR
+        ========================================================= */
+
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+    </script>
+
+</body>
+
+</html>
